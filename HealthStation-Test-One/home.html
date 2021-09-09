@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/home.css">
+  <title>Developer's Sweets</title>
+</head>
+
+<body>
+
+  <div class="overlay"></div>
+
+  <div class="heading">
+    <div class="title">
+      <p><span>sweet</span> developer</p>
+    </div>
+  </div>
+
+  <div class="input-and-table-container">
+    <div class="first-container">
+      <div class="input-container">
+        <div class="input-div">
+          <div class="input-one">
+            <p>Number of Developer(s)</p>
+            <input type="text" name="developer" class="developer-input" id="developer" />
+          </div>
+        </div>
+
+        <div class="input-div">
+          <div class="input-one">
+            <p>Number of Sweets</p>
+            <input type="text" name="sweets" class="sweet-input" id="sweets" />
+          </div>
+        </div>
+
+        <div class="input-div">
+          <div class="input-one">
+            <p>Starting Point</p>
+            <input type="text" name="start-point" class="start-input" id="start-point" />
+          </div>
+        </div>
+      </div>
+      <div class="find-sweet-dev">
+        <button class="find-developer-sweet">find developer with bad sweet</button>
+      </div>
+    </div>
+
+    <div class="table-container">
+      <table class="styled-table">
+        <thead>
+          <tr>
+            <th>Number of Developers</th>
+            <th>Number of sweets</th>
+            <th>Starting Point</th>
+            <th>Warned Developer</th>
+          </tr>
+        </thead>
+        <tbody class="table-row">
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="./assets/js/home.js"></script>
+</body>
+
+</html>
