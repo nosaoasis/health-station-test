@@ -92,7 +92,7 @@ findDeveloperSweet.addEventListener("click", () => {
 
   if (Number(startInputValue) >= Number(devInputValue)) {
     startInput.value = "";
-    alert("Starting number must be less than number of sweets");
+    alert("Starting number must be less than number of developers");
     startInput.reset;
     startInput.focus();
     startInput.style.border = `2px solid red`;
@@ -108,27 +108,48 @@ findDeveloperSweet.addEventListener("click", () => {
   let startTest = numberRegex.test(startInputValue);
   let startTestSpecial = specialCharRegex.test(startInputValue);
 
-  if (devTest || devTestSpecial) {
+  if (
+    devTest ||
+    devTestSpecial ||
+    devInputValue == 0 ||
+    devInputValue == parseFloat(devInputValue)
+  ) {
     devInput.value = "";
-    alert("You must enter a number");
+    alert(
+      "Your entry must be whole numbers. No zero value or decimals allowed."
+    );
     devInput.reset;
     devInput.focus();
     devInput.style.border = `2px solid red`;
     return;
   }
 
-  if (sweetTest || sweetTestSpecial) {
+  if (
+    sweetTest ||
+    sweetTestSpecial ||
+    sweetInputValue == 0 ||
+    sweetInputValue == parseFloat(sweetInputValue)
+  ) {
     sweetInput.value = "";
-    alert("You must enter a number");
+    alert(
+      "Your entry must be whole numbers. No zero value or decimals allowed."
+    );
     sweetInput.reset;
     sweetInput.focus();
     sweetInput.style.border = `2px solid red`;
     return;
   }
 
-  if (startTest || startTestSpecial) {
+  if (
+    startTest ||
+    startTestSpecial ||
+    startInputValue == 0 ||
+    startInputValue == parseFloat(startInputValue)
+  ) {
     startInput.value = "";
-    alert("You must enter a number");
+    alert(
+      "Your entry must be whole numbers. No zero value or decimals allowed."
+    );
     startInput.reset;
     startInput.focus();
     startInput.style.border = `2px solid red`;
