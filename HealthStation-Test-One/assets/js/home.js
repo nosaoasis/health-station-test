@@ -100,11 +100,15 @@ findDeveloperSweet.addEventListener("click", () => {
   }
 
   let numberRegex = /[a-z]/;
+  let specialCharRegex = /[-._!"`'#%&,:;<>=@{}~\$\(\)\*\+\/\\\?\[\]\^\|]+/;
   let devTest = numberRegex.test(devInputValue);
+  let devTestSpecial = specialCharRegex.test(devInputValue);
   let sweetTest = numberRegex.test(sweetInputValue);
+  let sweetTestSpecial = specialCharRegex.test(sweetInputValue);
   let startTest = numberRegex.test(startInputValue);
+  let startTestSpecial = specialCharRegex.test(startInputValue);
 
-  if (devTest) {
+  if (devTest || devTestSpecial) {
     devInput.value = "";
     alert("You must enter a number");
     devInput.reset;
@@ -113,7 +117,7 @@ findDeveloperSweet.addEventListener("click", () => {
     return;
   }
 
-  if (sweetTest) {
+  if (sweetTest || sweetTestSpecial) {
     sweetInput.value = "";
     alert("You must enter a number");
     sweetInput.reset;
@@ -122,7 +126,7 @@ findDeveloperSweet.addEventListener("click", () => {
     return;
   }
 
-  if (startTest) {
+  if (startTest || startTestSpecial) {
     startInput.value = "";
     alert("You must enter a number");
     startInput.reset;
