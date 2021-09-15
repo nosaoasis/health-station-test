@@ -108,15 +108,10 @@ findDeveloperSweet.addEventListener("click", () => {
   let startTest = numberRegex.test(startInputValue);
   let startTestSpecial = specialCharRegex.test(startInputValue);
 
-  if (
-    devTest ||
-    devTestSpecial ||
-    devInputValue == 0 ||
-    devInputValue == parseFloat(devInputValue)
-  ) {
+  if (devTest || devTestSpecial || devInputValue < 1) {
     devInput.value = "";
     alert(
-      "Your entry must be whole numbers. No zero value or decimals allowed."
+      "Your entry must be whole numbers. No zero value or decimals allowed dev."
     );
     devInput.reset;
     devInput.focus();
@@ -124,15 +119,10 @@ findDeveloperSweet.addEventListener("click", () => {
     return;
   }
 
-  if (
-    sweetTest ||
-    sweetTestSpecial ||
-    sweetInputValue == 0 ||
-    sweetInputValue == parseFloat(sweetInputValue)
-  ) {
+  if (sweetTest || sweetTestSpecial || sweetInputValue < 1) {
     sweetInput.value = "";
     alert(
-      "Your entry must be whole numbers. No zero value or decimals allowed."
+      "Your entry must be whole numbers. No zero value or decimals allowed sweet."
     );
     sweetInput.reset;
     sweetInput.focus();
@@ -140,15 +130,10 @@ findDeveloperSweet.addEventListener("click", () => {
     return;
   }
 
-  if (
-    startTest ||
-    startTestSpecial ||
-    startInputValue == 0 ||
-    startInputValue == parseFloat(startInputValue)
-  ) {
+  if (startTest || startTestSpecial || startInputValue < 1) {
     startInput.value = "";
     alert(
-      "Your entry must be whole numbers. No zero value or decimals allowed."
+      "Your entry must be whole numbers. No zero value or decimals allowed start."
     );
     startInput.reset;
     startInput.focus();
